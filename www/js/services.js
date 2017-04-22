@@ -123,11 +123,11 @@ angular.module('starter.services', [])
                 "name":"RaspberryPi",
                 "link":"https://www.raspberrypi.org/feed/",
                 "catg":""
-            },,{
+            },{
                 "name":"RaspiFeed",
                 "link":"https://raspifeed.com/feed/en",
                 "catg":""
-            },,{
+            },{
                 "name":"RaspberryPi",
                 "link":"https://www.raspberrypi.org/feed/",
                 "catg":""
