@@ -1,0 +1,19 @@
+<ion-view view-title="Favorites">
+    <ion-content>
+        <ion-list>
+            <ion-item ng-if="data.length > 0" class="item-remove-animate item-icon-right" ng-repeat="art in data | orderBy:sortByDate:true"  ng-click="openModal(art)">
+
+                <h1 style="font-size:1.5rem;">{{art.title}}</h1>
+                <p ng-bind-html="art.description"></p>
+                <span style="font-style: italic;" ng-bind-html="getDate(art.pubDate)"></span> - <span style="font-style: italic;" ng-bind-html="art.titleSite"></span>
+
+                <ion-option-button class="button-assertive" ng-click="remove(art)">
+                    Delete
+                </ion-option-button>
+            </ion-item>
+            <ion-item ng-if="data.length < 1 && !isLoading" style="text-align: center;">
+                <p>OooOh non il y a rien :'(</p>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,18 @@
+<ion-modal-view>
+    <ion-header-bar>
+        <button style="font-size:30px; color:#4d4d4d" ng-click="closeModal()" class="button button-icon button-clear">
+            <i class="ion-android-arrow-back"></i>
+        </button>
+        <h1 class="title">Article</h1>
+        <button style="font-size:30px; color:#4d4d4d" ng-click="favorite()" class="button button-icon button-clear">
+            <i ng-class="isAlreadyLoved() == true ? 'ion-ios-heart':'ion-ios-heart-outline';"></i>
+        </button>
+    </ion-header-bar>
+    <ion-content class="has-header" style="padding:10px;">
+        <h1 style="padding:2px; font-size: 1.5rem;" ng-bind-html="currentRss.title"></h1>
+
+        <p style="font-size: 1rem;text-align: justify;" ng-bind-html="currentRss.description"></p>
+        <span style="font-style: italic;" ng-bind-html="getDate(currentRss.pubDate)"></span> - <span style="font-style: italic;" ng-bind-html="currentRss.titleSite"></span>
+        <button style="width:90%;margin:auto;" class="button button-block button-calm" ng-click="openInBrowser(currentRss)">Lire plus</button>
+    </ion-content>
+</ion-modal-view>
